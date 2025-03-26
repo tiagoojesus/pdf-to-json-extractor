@@ -1,4 +1,4 @@
-# Extrator de Exames de PDF para JSON
+# Extrator de PDF para JSON
 Este projeto fornece um **script Python** para extrair texto estruturado e imagens de qualquer **documento PDF** e convertê-los num **formato JSON**.
 
 ## Caraterísticas
