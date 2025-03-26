@@ -14,28 +14,28 @@ Este projeto fornece um **script Python** para extrair texto estruturado e image
 
 ```
 📦 pdf-to-json-extractor
- ┣ 📂 database-exams/          # Original PDF files
+ ┣ 📂 database-exams/          # Ficheiro PDF original
  ┃ ┗ 📄 rel_3_condutores.pdf
- ┣ 📂 extracted_images/        # Extracted images
- ┃ ┗ 🖼 image_1_1.png (extracted images)
- ┣ 📄 extract.py               # Python script for extraction
- ┣ 📄 extracted_output.json    # Final structured JSON
- ┣ 📄 README.md                # Documentation
- ┗ 📄 .gitignore               # Ignore unnecessary files
+ ┣ 📂 extracted_images/        # Imagens extraídas
+ ┃ ┗ 🖼 image_1_1.png (imagem extraída)
+ ┣ 📄 extract.py               # Script Python para extração
+ ┣ 📄 extracted_output.json    # JSON estruturado final
+ ┗ 📄 README.md                # Documentação
+
 
 
 ```
 ## Como usar
 
-### 1️. **Clonar este repositório
-**
+### 1️. **Clonar este repositório**
+
 ```sh
 git clone 
 cd pdf-to-json-extractor
 ```
 
-### 2️. **Instalar dependências
-**
+### 2️. **Instalar dependências**
+
 ```sh
 pip install pymupdf
 ```
