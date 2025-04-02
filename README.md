@@ -1,57 +1,75 @@
 # Extrator de PDF para JSON
-Este projeto fornece um **script Python** para extrair texto estruturado e imagens de qualquer **documento PDF** e convertê-los num **formato JSON**.
 
-## Caraterísticas
+Este projeto fornece um **script Python** para extrair **texto e imagens estruturadas** de qualquer documento **PDF** e convertê-los para um formato **JSON**.
+
+## Funcionalidades
 
 - Extrai **texto** e **imagens** de qualquer PDF  
 - Estrutura automaticamente **perguntas e respostas** em JSON  
-- Funciona com **exames de escolha múltipla, questionários e documentos**  
-- Guarda **imagens** extraídas separadamente  
+- Funciona com **exames, testes de código, e outros documentos**  
+- Guarda as **imagens extraídas** separadamente  
 
 ---
 
-## 📂 Estrutura do repositório
+## 📂 Estrutura do Repositório
 
 ```
 📦 pdf-to-json-extractor
- ┣ 📂 database-exams/          # Ficheiro PDF original
- ┃ ┗ 📄 rel_3_condutores.pdf
- ┣ 📂 extracted_images/        # Imagens extraídas
- ┃ ┗ 🖼 image_1_1.png (imagem extraída)
- ┣ 📄 extract.py               # Script Python para extração
- ┣ 📄 extracted_output.json    # JSON estruturado final
- ┗ 📄 README.md                # Documentação
-
-
-
+ ┣ 📂 input_pdfs/            # Guardar aqui os PDFs
+ ┃ ┗ 📄 exemplo.pdf
+ ┣ 📂 extracted_images/      # Imagens extraídas (criadas automaticamente)
+ ┃ ┗ 🖼 image_1.png (imagens extraídas)
+ ┣ 📄 extract.py             # Script Python para extração
+ ┣ 📄 extracted_output.json  # JSON final estruturado
+ ┣ 📄 README.md              # Documentação
+ ┗ 📄 .gitignore             # Ignorar ficheiros desnecessários
 ```
-## Como usar
 
-### 1️. **Clonar este repositório**
+---
+
+## Como Usar
+
+### **Clonar este repositório**
 
 ```sh
 git clone 
 cd pdf-to-json-extractor
 ```
 
-### 2️. **Instalar dependências**
-
+### **Verificar se tens Python 3 instalado**
 ```sh
-pip install pymupdf
+python3 --version
+```
+Se **não estiver instalado**, instala-o da seguinte forma:  
+- **Ubuntu/Debian**:  
+  ```sh
+  sudo apt update && sudo apt install python3 python3-pip
+  ```
+- **MacOS** (com Homebrew):  
+  ```sh
+  brew install python
+  ```
+- **Windows**: [Descarrega Python 3](https://www.python.org/downloads/)
+
+### **Instalar as dependências**
+```sh
+pip3 install pymupdf
 ```
 
-### 3️. **Executar o script**
-```sh
-python extract.py
-```
-Isto irá extrair todo o texto e imagens de `rel_3_condutores.pdf` e guardá-los em `extracted_output.json`
+### **Colocar o ficheiro PDF na pasta `input_pdfs/`**  
+Muda o nome, se necessário (ex: `exame.pdf`).
 
+### **Executar o script**
+```sh
+python3 extract.py --pdf input_pdfs/exame.pdf
+```
+Isto irá extrair o texto e imagens e gerar o ficheiro `extracted_output.json`.
 
 ---
 
-## Estrutura JSON
+## Estrutura do JSON
 
-Cada pergunta é armazenada no seguinte formato:
+Cada pergunta extraída segue este formato:
 
 ```json
 [
@@ -66,80 +84,24 @@ Cada pergunta é armazenada no seguinte formato:
 ]
 ```
 
-- **`question`** → O texto da pergunta extraído.  
-- **`options`** → Dicionário com opções de resposta.  
-- **`image`** → Nome de ficheiro da imagem relacionada (se disponível).
-  
-
----  
-
-
-## Configuração
-
-Por defeito, o script extrai **todos os textos e imagens**. Se precisar de personalização (e.g., filtrar secções específicas), pode modificar o `extract.py`.
-
-
-## Contribuir
-Quer melhorar este projeto? Sinta-se à vontade para fazer um fork, modificar e enviar um pull request!  
-
-
-### Licença
-Este projeto é de código aberto. Sinta-se à vontade para o usar e modificar. 
-
+- **`question`** → O texto da pergunta extraída  
+- **`options`** → Dicionário com as opções de resposta  
+- **`image`** → Nome do ficheiro da imagem associada (se disponível)  
 
 ---
 
+## Configuração
 
+Por defeito, o script extrai **todo o texto e imagens** do PDF. Se precisares de personalizar a extração (ex: filtrar secções específicas), podes editar o ficheiro `extract.py`.
 
+---
 
+## Contribuir
+Queres melhorar este projeto? Sente-te à vontade para fazer um **fork**, modificar e enviar um **pull request**!  
 
+### Licença
+Este projeto é open-source. Podes usá-lo e modificá-lo livremente. 🚀  
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Agora o **README.md** está 100% correto, mantendo o formato JSON original que pediste. Se precisares de mais ajustes, avisa! 
