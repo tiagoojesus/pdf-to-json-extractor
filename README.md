@@ -100,8 +100,6 @@ Por defeito, o script extrai **todo o texto e imagens** do PDF. Se precisares de
 Queres melhorar este projeto? Sente-te à vontade para fazer um **fork**, modificar e enviar um **pull request**!  
 
 ### Licença
-Este projeto é open-source. Podes usá-lo e modificá-lo livremente. 🚀  
+Este projeto é open-source. Podes usá-lo e modificá-lo livremente. 
 
 ---
-
-Agora o **README.md** está 100% correto, mantendo o formato JSON original que pediste. Se precisares de mais ajustes, avisa! 
